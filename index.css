@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gainsboro;
+  color: #713452;
+  font-family: "Marcellus SC", serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.chocchunkpic {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.3;
+  top: 20%;
+  right: 30%;
+  width: 52%;
+  
+}
+.results {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+}
+.box {
+  flex-basis: 49%;
+
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.box:nth-child(1) {
+  background-color: #8fbfc8;
+  margin-bottom: 3px;
+
+  text-align: center;
+}
+
+.box:nth-child(2) {
+  background-color: white;
+
+  max-width: 100%;
+  text-align: center;
+  height: 200px;
+}
+
+h4 {
+  font-size: 36px;
+  font-family: "Poiret One", cursive;
+}
+h2,h3 {
+  font-size: 36px;
+}
+
+h1 {
+  font-family: "Poiret One", cursive;
+  font-size: 54px;
+  text-align: center;
+}
+
+input[type="submit"] {
+  padding: 8px;
+  font-family: "Poiret One", cursive;
+  font-size: 24px;
+  width: 30%;
+  margin-top: 35px;
+  border: 1px, solid, #713452;
+}
+
+input[type="number"] {
+  padding: 4px;
+  border: 2px, solid, #713452;
+  border-radius: 3px;
+  width: 10%;
+  margin-left: 15px;
+}
+
+input[type="text"] {
+  padding: 4px;
+  border: 2px, solid, #713452;
+  border-radius: 3px;
+  width: 50%;
+  margin-left: 15px;
+}
+.free {
+  display: flex;
+  flex-direction: row;
+}
+
+input[type="checkbox"] {
+  padding-right: 10px;
+  padding-left: 20px;
+}
+.checkentry {
+  padding-right: 10px;
+  padding-left: 40px;
+}
+.chbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-right: 10px;
+}
+
+.chbox:nth-child {
+  display: flex;
+  flex-direction: row;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+.entry {
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+}
+
+.error-message {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+a:link {
+  color: #8fbfc8;
+  text-decoration: none;
+  font-family: "Poiret One", cursive;
+  font-size: 40px;
+  padding: 3px;
+}
+
+a:visited {
+  color: #8fbfc8;
+}
+
+a:hover {
+  color: #3a3f40;
+}
+
+a:active {
+  color: #713452;
+}
+
+
+@media screen and (min-width: 300px)
+@media screen and (min-width: 600px)
+@media screen and (min-width: 1000px)
