@@ -1,0 +1,39 @@
+<body>
+	<div class="container">
+		<h1>Cookie Recipe Finder</h1>
+		<h3>Search For a Cookie Recipe Based on Preferred Ingredient.</h3>
+		<div class="form">
+			<img src="https://uploads.codesandbox.io/uploads/user/7b2eda95-3c1e-43cb-8c4e-94fb1dce01d2/sAen-chocchunk.png" class="chocchunkpic">
+        <form id="js-form">
+            <label for="search-term"  class="entry">Search by Ingredient(s) ex.apple, peppermint, almond</label>
+            <input type="text" name="search-term" id="js-search-term"  placeholder="ex.almonds" required><br>
+
+            <label for="max-results" class="entry">How many recipes to you want to see?</label>
+            <input type="number" name="max-results" id="js-max-results" value="10"><br>
+            <label for  class="entry" ="max-results">What is the maximum number of ingredients you want to use?</label>
+            <input type="number" name="max-ingr" id="js-max-ingr" value="10"><br>
+
+
+            <h4>Do you want it.....</h4>
+          <div class="free">
+            <div class="chbox"><label for="gluten-free" class="checkentry">Gluten-Free?</label>
+            <input value="gluten-free" type="checkbox" name="numbers"></div>
+			<div class="chbox"><label for="soy-free" class="checkentry">Soy-Free?</label><input value="soy-free" type="checkbox" name="numbers"></div>
+			<div class="chbox"><label for="Dairy-free" class="checkentry">Dairy-Free?</label>
+           <input class="numbers" value="dairy-free" type="checkbox" name="numbers"></div>
+          </div><br><br>
+
+		<input type="submit" class="findrecipes" value="Find me recipes">
+        </form>
+        </div>
+
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+         <h2>Search results</h2>
+	<ul id="results-list">
+          </ul>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
