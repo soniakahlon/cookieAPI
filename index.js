@@ -79,11 +79,6 @@ function watchForm() {
     getRecipes(searchTerm, to, ingr, healthLabels);
   });
 }
-//*$('#js-form').on('submit', function () {
-  //$('html, body').animate({
-    //scrollTop: $("#results-list").offset().top
-  //}, 2000);
 
-//});*//
 
 $(watchForm);
