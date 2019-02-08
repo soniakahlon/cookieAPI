@@ -31,8 +31,7 @@ h4 {
   font-size: 40px;
   font-family: "Poiret One", cursive;
 }
-h2,
-h3 {
+h2, h3 {
   font-size: 34px;
 }
 
@@ -72,25 +71,6 @@ input[type="text"] {
   flex-direction: row;
 }
 
-input[type="checkbox"] {
-  padding-right: 10px;
-  padding-left: 20px;
-}
-.checkentry {
-  padding-right: 10px;
-  padding-left: 40px;
-}
-/*.chbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding-right: 10px;
-}
-
-.chbox:nth-child {
-  display: flex;
-  flex-direction: row;
-}*/
 
 button:hover {
   cursor: pointer;
@@ -102,6 +82,7 @@ form {
   flex-direction: column;
   z-index: 1000;
 }
+
 .entry {
   padding: 20px;
 }
@@ -111,24 +92,24 @@ form {
   text-align: center;
   margin: 4px;
   justify-content: center;
-  
-}
-.recipeimage{
-  transform: scale(1,1);
-  transition: transform 0.5s ease
 }
 
-.recipeimage:hover{
-   transform: scale(1.2,1.2)
+.recipeimage {
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
 }
+
+.recipeimage:hover {
+  transform: scale(1.2, 1.2);
+}
+
 .box:nth-child(2) {
   background-color: white;
   max-width: 100%;
   text-align: center;
   margin: 4px;
-   justify-content: center;
-   align-items: center;
-  
+  justify-content: center;
+  align-items: center;
 }
 ul {
   list-style: none;
