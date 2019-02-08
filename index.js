@@ -15,7 +15,10 @@ function formatQueryParams(params) {
 function displayResults(responseJson, to, ingr, excluded) {
   console.log(responseJson);
   $("#results-list").empty();
-
+  if (responseJson.hits.length === 0) {
+    $("#results-list").append("<h1>No recipes found. Try a new search.</h1>");
+    return;
+  }
   for (let i = 0; (i < responseJson.hits.length) & (i < to); i++) {
     $("#results-list").append(
       `<div class="results">
