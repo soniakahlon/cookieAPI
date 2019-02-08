@@ -12,7 +12,7 @@ function formatQueryParams(params) {
   return queryItems.join("&");
 }
 
-function displayResults(responseJson, to, ingr, healthLabels) {
+function displayResults(responseJson, to, ingr, excluded) {
   console.log(responseJson);
   $("#results-list").empty();
 
@@ -20,7 +20,7 @@ function displayResults(responseJson, to, ingr, healthLabels) {
     $("#results-list").append(
       `<div class="results">
            <div class="box">
-            <li><img  alt="picture of cookie" src="${
+            <li><img class=recipeimage alt="picture of cookie" src="${
               responseJson.hits[i].recipe.image
             }">
             </div>
@@ -34,19 +34,22 @@ function displayResults(responseJson, to, ingr, healthLabels) {
 
   $("#results").removeClass("hidden");
 
-  $('html, body').animate({
-    scrollTop: $("#results-list").offset().top
-  }, 2000);
+  $("html, body").animate(
+    {
+      scrollTop: $("#results-list").offset().top
+    },
+    2000
+  );
 }
 
-function getRecipes(searchTerm, to, ingr, healthLabels) {
+function getRecipes(searchTerm, to, ingr, excluded) {
   const params = {
     app_id: apiId,
     app_key: apiKey,
     to,
     q: `cookie&${searchTerm}`,
     ingr: `${ingr}`,
-    healthLabels: `${healthLabels}`
+    excluded: `${excluded}`
   };
 
   const queryString = formatQueryParams(params);
@@ -59,7 +62,7 @@ function getRecipes(searchTerm, to, ingr, healthLabels) {
       }
       throw new Error(response.statusText);
     })
-    .then(responseJson => displayResults(responseJson, to, ingr, healthLabels))
+    .then(responseJson => displayResults(responseJson, to, ingr, excluded))
     .catch(err => {
       $("#js-error-message").text(`Something went wrong: ${err.message}`);
     });
@@ -71,14 +74,10 @@ function watchForm() {
     const searchTerm = $("#js-search-term").val();
     const to = $("#js-max-results").val();
     const ingr = $("#js-max-ingr").val();
-    const healthFree = $(".numbers:checked");
-    const healthLabels = [];
-    for (let i = 0; i < healthFree.length; i++) {
-      healthLabels.push($(healthFree[i]).val());
-    }
-    getRecipes(searchTerm, to, ingr, healthLabels);
+    const excluded = $("#js-exclu-ingr").val();
+
+    getRecipes(searchTerm, to, ingr, excluded);
   });
 }
-
 
 $(watchForm);
